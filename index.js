@@ -22,9 +22,6 @@ copyButtons.forEach((btn) => {
     navigator.clipboard.writeText(phoneNumber).then(() => {
       alert(`Hotline number ${phoneNumber} copied to clipboard!!!!`);
     });
-    // .catch(err => {
-    //   console.error("Failed to copy: ", err);
-    // });
   });
 });
 
