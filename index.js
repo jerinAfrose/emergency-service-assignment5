@@ -15,6 +15,16 @@ copyButtons.forEach((btn) => {
   btn.addEventListener("click", function () {
     let current = parseInt(copyCount.textContent);
     copyCount.textContent = current + 1;
+
+    const phoneNumber = btn.dataset.number;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+      alert(`Hotline number ${phoneNumber} copied to clipboard!!!!`);
+    });
+    // .catch(err => {
+    //   console.error("Failed to copy: ", err);
+    // });
   });
 });
 
